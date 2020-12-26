@@ -2,29 +2,40 @@
 
 namespace Zhelonin;
 
-use \core\EquationInterface as EI;
+use core\EquationInterface;
 
+Class Quadratic extends Line implements EquationInterface{
 
-class Quadratic extends Line implements EI
-{
-    public function quadratic_equation($a, $b, $c)
-    {
-        return ($b * $b) - 4 * $a * $c;
+    protected function dis($a, $b, $c){
+        return ($b**2)-4*$a*$c;
     }
 
-    public function solve($a, $b, $c)
-    {
-        If ($a === 0) {
-            return parent::line_equation($b, $c);
+    public function solve($a, $b, $c){
+
+
+
+        if($a == 0){
+            return parent::solve($b,$c);
         }
-        $d = $this->quadratic_equation($a, $b, $c);
-        if ($d > 0) {
-            $eg = sqrt($d);
-            return $this->x = array((-$b - $eg) / (2 * $a), (-$b + $eg) / (2 * $a));
+        $x = $this->dis($a, $b, $c);
+
+        MyLog::log("Определено, что это квадратное уравнение");
+        if ($x > 0){
+            return $this->X=array(
+                (-$b+sqrt($x))/(2*$a),
+                (-$b-sqrt($x))/(2*$a)
+            );
         }
-        if ($d === 0) {
-            return $this->x = array(-$b / (2 * $a));
+
+        if($x == 0){
+            return $this->X=array(-($b/(2*$a)));
         }
-        return null;
+
+        throw new ZheloninException("Ошибка: уравнение не имеет корней.");
+
     }
+
 }
+?>
+
+

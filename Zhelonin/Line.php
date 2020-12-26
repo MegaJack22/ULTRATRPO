@@ -1,15 +1,21 @@
 <?php
+
 namespace Zhelonin;
-class Line
+
+Class Line
 {
-    protected $x;
-
-    public function line_equation($a,$b)
+    public function solve($a, $b)
     {
-        if ($a != 0) {
-            return $this->x = (-$b) / $a;
-        }
-        return null;
 
+        if ($a == 0) {
+            throw new ZheloninException("Ошибка: уравнения не существует.");
+        }
+        MyLog::log("Определено, что это линейное уравнение");
+        return $this->X = array(-($b / $a));
     }
+
+    protected $X;
 }
+
+?>
+
