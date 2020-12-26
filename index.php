@@ -1,41 +1,13 @@
 <?php
+namespace Laba3;
 
-class A
-{
-    protected $x;
+use Zhelonin\MyLog;
 
-    public function Lin(float $a, float $b)
-    {
-        return (a == 0 ? null : $this->x = [-$b / $a]);
-    }
-}
-
-class B extends A
-{
-    protected $d, $sd
-    protected function Desc($a, $b, $c)
-    {
-        return $this->d = $b sqrt - 4 * $a * $c;
-    }
-
-    public function Kva(float $a, float $b, float $c)
-    {
-        if ($a != 0) {
-            if ($this->Desc($a, $b, $c < 0){
-            return null;
-        }
-
-            $this->sd = sqrt($this->d);
-            $this->x[0] = (-$b - $this->sd) / (2 * $a);
-
-            if ($this->d! = 0){
-                $this->x[1] = (-$b + $this - sd) / (2 * $a)
-        }
-
-return $this->x;
-    }
-        return parent::Kva($b, $c);
-
-    }
-
-?>
+require_once "core\EquationInterface.php";
+require_once "core\LogAbstract.php";
+require_once "core\LogInterface.php";
+require_once "Zhelonin\Line.php";
+require_once "Zhelonin\MyLog.php";
+require_once "Zhelonin\Quadratic.php";
+MyLog::log("ULTRA");
+MyLog::write();
