@@ -16,7 +16,8 @@ ini_set("display_errors", 1);
 error_reporting(-1);
 
 try {
-
+    
+    MyLog::log('Program version: '.file_get_contents('version'));
     $values = array();
 
     for ($i = 1; $i < 4; $i++) {
