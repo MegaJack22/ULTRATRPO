@@ -21,7 +21,7 @@
         }
     ],
     "require": {
-        "megajack22/ultralib": "dev-main"
+        "megajack22/ultralib": "2.0"
       },
     "scripts": {
         "post-update-cmd": [
