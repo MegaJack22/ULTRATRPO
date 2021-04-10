@@ -1,9 +1,10 @@
 <?php
 
-use Zhelonin\MyLog;
+use Zhelonin\MyLog as ML;
 use Zhelonin\ZheloninException;
-use Zhelonin\Quadratic;
+use Zhelonin\Quadratic ;
 
+/*
 include "core/EquationInterface.php";
 include "core/LogAbstract.php";
 include "core/LogInterface.php";
@@ -11,9 +12,11 @@ include "Zhelonin/MyLog.php";
 include "Zhelonin/Line.php";
 include "Zhelonin/Quadratic.php";
 include "Zhelonin/ZheloninException.php";
-
+*/
 ini_set("display_errors", 1);
 error_reporting(-1);
+
+require_once("vendor/autoload.php");
 
 try {
     

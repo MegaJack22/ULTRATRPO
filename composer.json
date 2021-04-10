@@ -1,0 +1,34 @@
+{
+    "name": "megajack22/ultratrpo",
+    "description": "ultratrpo",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability":"dev",
+    "authors": [
+        {
+            "name": "Mega Jack",
+            "email": "megajack2001@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"vcs",
+            "url":"https://github.com/MegaJack22/ULTRALIB.git"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/rok9ru/trpo-core.git"
+        }
+    ],
+    "require": {
+        "megajack22/ultralib": "dev-main"
+      },
+    "scripts": {
+        "post-update-cmd": [
+            "git symbolic-ref --short -q HEAD>version"
+        ],
+        "post-install-cmd": [
+            "git symbolic-ref --short -q HEAD>version"
+        ]
+    }
+}
